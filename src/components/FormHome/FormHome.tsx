@@ -10,10 +10,10 @@ export const FormHome = () => {
   const {
     setClientName,
     setClientLastName,
-    setService,
+    //setService,
     clientName,
     clientLastName,
-    service,
+    //service,
   } = useContext(GiftCardContext);
 
   const handleNameChange = (name: string) => {
