@@ -2,16 +2,20 @@ import React, { useState } from "react";
 import { createContext } from "react";
 
 interface GiftCardContextProps {
-  clientName?: string;
-  clientLastName?: string;
-  service?: string;
+  clientName: string;
+  clientLastName: string;
+  service: string;
 
   setClientName?: React.Dispatch<React.SetStateAction<string>>;
   setClientLastName?: React.Dispatch<React.SetStateAction<string>>;
   setService?: React.Dispatch<React.SetStateAction<string>>;
 }
 
-export const GiftCardContext = createContext<GiftCardContextProps>({});
+export const GiftCardContext = createContext<GiftCardContextProps>({
+  clientName: "",
+  clientLastName: "",
+  service: "",
+});
 
 export const GiftCardProvider = ({ children }: React.PropsWithChildren<{}>) => {
   const [clientName, setClientName] = useState<string>("");
